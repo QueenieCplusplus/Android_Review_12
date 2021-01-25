@@ -9,9 +9,10 @@ ViewMode Pattern and LiveData as an observable data holder
            - viewmodels 
              (to resolve the problems from I/O threads and UI main thread using coroutines instead of threads)
        
-           - db (data src fm Room)
-           - domain (see Android_Review_10, data src fm web server)
-           - repo (mediators for diff data src)
+           - db - DBEntities.kt (DBVideo data class) (asDomainModel called Video)
+                - Room.kt (wait to code)
+           - domain - Models.kt (Video)
+           - repo ((wait to code)
            
            
 
