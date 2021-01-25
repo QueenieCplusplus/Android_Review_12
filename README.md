@@ -143,9 +143,27 @@ ViewMode Pattern and LiveData as an observable data holder
           }
           
           
-          
           // DB
           @Database(entities = [DBVideo], version = 1)
+          abstract class VideosDB: RoomDatabase(){
           
+             abstract val videoDao:VideoDao  
+          
+          }
+          
+          // public method to get DB entities
+          
+          private lateinit var INSTANCE: VideosDB
+          
+          fun getDB(conext: Context): VideosDB {
+         
+             // an inspector
+          
+             return INSTANCE
+          
+          }
+          
+  6. inspector 驗證寫法 in public method called getDB().
   
+     https://github.com/google-developer-training/android-kotlin-fundamentals-apps/blob/master/DevBytesRepository/app/src/main/java/com/example/android/devbyteviewer/database/Room.kt
   
