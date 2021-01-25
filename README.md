@@ -34,31 +34,40 @@ ViewMode Pattern and LiveData as an observable data holder
        
        
              Network object
+             
+                   |
+                   |
+                   |
+             
+            List<NetworkVideo>
            
-                   |
-                   |
-                   |
-    
-    
-            data class constructor         interface        abstract class
-                List<DBVideo>   -------------  Dao   --------   VideosDB  ---  Room
-    
-    
-                                                |
-                                                |
-    
-    
-                               List<DBVideo>.asDomainModel(): List<Video>
+             |          |                      
+             |          |                       
+             |          |                        
+             |          |       
+             |
+             |
+             |              data class constructor         interface        abstract class
+             |               List<DBVideo>   -------------  Dao   --------   VideosDB  ---  Room
+             |  
+             |   
+             |                                  |
+             |                                  |
+             |    
+             | 
+             |                 List<DBVideo>.asDomainModel(): List<Video>
+             |                 
+             |                                   |
+             |                                   |
                                
-                                                 |
-                                                 |
                                
-                                             List<Video> 
+                           List<Video> 
+                           
     
-  
-                             |                                          |
-                             |                                          |
-                             V                                          V
+   
+                             |                                                 |
+                             |                                                 |
+                             V                                                 V
                              
                              
   
