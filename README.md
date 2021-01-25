@@ -14,3 +14,16 @@ ViewMode Pattern and LiveData as an observable data holder
 
 2. code for ViewModels Pattern using LiveData Module.
  
+       // got to app/src/main/java....../katesvideoapp/viewmodels/KatesViewModel.kt
+       
+       package com.example.android.katesvideoapp.viewmodels
+       
+       [app module]
+       
+       [lifecycle module]
+       
+       [data modules]
+       
+       [coroutines]
+       
+       [exception handler]
