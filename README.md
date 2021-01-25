@@ -24,10 +24,22 @@ ViewMode Pattern and LiveData as an observable data holder
        package com.example.android.katesvideoapp.viewmodels
        
        [app module]
+       import android.app.Application
        
        [lifecycle module]
+       import androidx.lifecycle.AndoridViewModel
+       import androidx.lifecycle.LiveData
+       import androidx.lifecycyle.MutableLiveData
+       import androidx.lifecycle.ViewModelProvider
+       import androidx.lifecycle.viewModelScope
        
-       [data modules]
+       [mediator data modules]
+       
+       [Domain data modules]
+       
+       [asDomain data modules]
+       
+       [local memory data models]
        
        [coroutines]
        
