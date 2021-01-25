@@ -39,11 +39,13 @@ ViewMode Pattern and LiveData as an observable data holder
                    |
                    |
              
+           data class in json format
             List<NetworkVideo>
            
              |          |                      
+             |          |
+             |        asDBModel()
              |          |                       
-             |          |                        
              |          |       
              |
              |
@@ -59,9 +61,9 @@ ViewMode Pattern and LiveData as an observable data holder
              |                 
              |                                   |
              |                                   |
-                               
-                               
-                           List<Video> 
+       asDomainModel()                           V
+             |                  
+             |-------------------------->      List<Video> 
                            
     
    
