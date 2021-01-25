@@ -10,7 +10,7 @@ ViewMode Pattern and LiveData as an observable data holder
              (to resolve the problems from I/O threads and UI main thread using coroutines instead of threads)
        
            - db - DBEntities.kt (DBVideo data class) (asDomainModel called Video)
-                - Room.kt (wait to code)
+                - Room.kt (wait to code to call getDB() method)
            - domain - Models.kt (Video)
            - repo ((wait to code)
            
@@ -63,15 +63,16 @@ ViewMode Pattern and LiveData as an observable data holder
 
 3. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
 
-          // TODO
 
           // go to app/src/main/java/..../katesvideoapp/db/Room.kt 持續性資料庫
 
           package com.example.android.devbyteviewer.db
 
+          [local cache]
           import androidx.room.*
 
           [modules matters with Livedata]
+          
 
           [context related module]
 
