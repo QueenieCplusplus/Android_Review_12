@@ -19,6 +19,10 @@ ViewMode Pattern and LiveData as an observable data holder
            - domain 
                 
                    - Models.kt (Video)
+                   
+           - network
+           
+                  - Service.kt (Network object)
            
            
   
@@ -27,7 +31,13 @@ ViewMode Pattern and LiveData as an observable data holder
   
        (1) 遠端資料處理                                  (2) 手機系統內部緩存
        Retrofit, a web service. see Android_Review_10    Room, a persistent data models saved in Caches of the app.
-    
+       
+       
+             Network object
+           
+                   |
+                   |
+                   |
     
     
             data class constructor         interface        abstract class
