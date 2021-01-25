@@ -9,6 +9,11 @@ ViewMode Pattern and LiveData as an observable data holder
             def lifecycle_version = "2.2.0"
             implementation "android.lifecycle:lifecycle-extensions:$lifecycle_version"
             implementation "android.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+            
+            // coroutines for getting the UI thread
+            def coroutines ="1.2.1"
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+            implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
 
         }
 
