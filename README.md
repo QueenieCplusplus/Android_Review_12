@@ -9,14 +9,16 @@ ViewMode Pattern and LiveData as an observable data holder
            - viewmodels 
              (to resolve the problems from I/O threads and UI main thread using coroutines instead of threads)
        
-           - repo ((wait to code as a Mediator)
+           - repo (wait to code as a Mediator)
        
-           - db - DBEntities.kt (DBVideo data class) (asDomainModel called Video)
-                - Room.kt (wait to code to call getDB() method, 
-                  create Dao retrieving data from DBVideo 
-                  and VideosDB entities)
-                  
-           - domain - Models.kt (Video)
+           - db   
+                  - DBEntities.kt (DBVideo data class) (asDomainModel() method)
+                 
+                  - Room.kt (VideosDB entities) (getDB() method) (Dao retrieving data from DBVideo)
+                 
+           - domain 
+                
+                   - Models.kt (Video)
            
            
   
