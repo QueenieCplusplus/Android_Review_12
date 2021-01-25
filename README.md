@@ -30,10 +30,16 @@ ViewMode Pattern and LiveData as an observable data holder
                            List<DBVideo>   ---  Dao   ----   VideosDB  ---  Room
     
     
-                                         List<Video> 
+                                                |
+                                                |
     
     
                                List<DBVideo>.asDomainModel(): List<Video>
+                               
+                                                 |
+                                                 |
+                               
+                                             List<Video> 
     
   
                              |                                          |
