@@ -13,10 +13,49 @@ ViewMode Pattern and LiveData as an observable data holder
                 - Room.kt (wait to code to call getDB() method)
            - domain - Models.kt (Video)
            - repo ((wait to code)
-           
+  
+  
+2. MVC pattern
+  
+       (1) 遠端資料處理                                  (2) 手機系統內部緩存
+       Retrofit, a web service. see Android_Review_10    Room, a persistent data models saved in Caches of the app.
+    
+    
+            List<Video>  ----    List<DBVideo>   ---  Dao   ----   VideosDB  ---  Room
+    
+    
+                               List<DBVideo>.asDomainModel(): List<Video>
+    
+  
+                             |                                          |
+                             |                                          |
+                             V                                          V
+                             
+                             
+  
+                                 (3) 暫存器，扮演記憶體使用佔用資料的協調者角色
+                                     Repository, a Mediator for data src from remote or local.
+                                     If this data is stale, the app's repository module starts updating the data in the background.
+                                  
+                                                  |
+                                                  |
+                                                  
+                                                  
+                                      LiveData acts as an Event Observer
+                                                  
+                                                  
+                                                  
+                                                  |
+                                                  V
+                          
+  
+                                           (4) ViewModel
+                                              to bind (3) with UI element. 
+                                              M + V = C, 
+                                              see Android_Review_12 using coroutines as workManager.
            
 
-1. add dependencies using implementation method called in path app/build.gradle
+3. add dependencies using implementation method called in path app/build.gradle
 
         dependencies {
 
@@ -32,7 +71,7 @@ ViewMode Pattern and LiveData as an observable data holder
 
         }
 
-2. code for ViewModels Pattern using LiveData Module.
+4. code for ViewModels Pattern using LiveData Module.
  
        // got to app/src/main/java....../katesvideoapp/viewmodels/KatesViewModel.kt
        
@@ -61,7 +100,7 @@ ViewMode Pattern and LiveData as an observable data holder
        [exception handler]
 
 
-3. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
+5. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
 
 
           // go to app/src/main/java/..../katesvideoapp/db/Room.kt 持續性資料庫
