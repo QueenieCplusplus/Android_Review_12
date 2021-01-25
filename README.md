@@ -71,10 +71,18 @@ ViewMode Pattern and LiveData as an observable data holder
           [local cache]
           import androidx.room.*
 
-          [modules matters with Livedata]
-          
+          [LifeCycle modules matters with Livedata]
+          import androidx.lifecycle.LiveData
 
           [context related module]
+          import android.content.Context
 
-          // TODO
+          // Data Access Obj 
+          @Dao
+          
+          
+          
+          // DB
+          @Database(entities = [DBVideo], version = 1)
+          
   
