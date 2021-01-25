@@ -29,7 +29,9 @@ ViewMode Pattern and LiveData as an observable data holder
        Retrofit, a web service. see Android_Review_10    Room, a persistent data models saved in Caches of the app.
     
     
-                           List<DBVideo>   ---  Dao   ----   VideosDB  ---  Room
+    
+            data class constructor         interface        abstract class
+                List<DBVideo>   -------------  Dao   --------   VideosDB  ---  Room
     
     
                                                 |
