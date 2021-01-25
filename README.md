@@ -12,4 +12,5 @@ ViewMode Pattern and LiveData as an observable data holder
 
         }
 
-2.
+2. code for ViewModels Pattern using LiveData Module.
+ 
