@@ -184,16 +184,22 @@ ViewMode Pattern and LiveData as an observable data holder
        import androidx.lifecycle.viewModelScope
        
        [mediator data modules]
+       import com.example.andorid.katesvideoapp.repo.VideosRepo
        
        [Domain data modules]
+       import com.example.andorid.katesvideoapp.domain.Video
        
        [asDomain data modules]
+       import com.example.andorid.katesvideoapp.network.asDomainModel
        
        [local memory data models]
+       import import com.example.andorid.katesvideoapp.db.getDB
        
        [coroutines]
+       import kotlinx.coroutines.*
        
        [exception handler]
+       import java.io.IOException
        
        // TODO
 
