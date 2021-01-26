@@ -216,7 +216,7 @@ ViewMode Pattern and LiveData as an observable data holder
   
        class ViewModel(application: Application): AndroidViewModel(application){
        
-              // TODO
+              
               // 資料常數宣告定義如下
               // 從應用程式緩存中提取資料
               // 緩存調度器 Repository 呼叫 <VideosDB> - Dao -> <DBVideo> - asDomainModel() -> <Video>
@@ -225,7 +225,10 @@ ViewMode Pattern and LiveData as an observable data holder
               // 將呈現在應用程式畫面上的影片
               val playlist = videosRepo.videos
               
-              
+              // TODO
+              // 事件報錯常數值宣告
+              // 網路報錯常數值宣告
+                       
               
               // after ViewModel is created, then this method is called immediately
               init {
@@ -240,6 +243,22 @@ ViewMode Pattern and LiveData as an observable data holder
                    
                      // TODO: body
                      // try{}catch(networkErr: IOException){}
+                     
+                     try {
+                     
+                         videosRepo.refreshVideos()
+                         
+                         // 事件報錯值預設為 false
+                         // 網路報錯值預設為 false
+                     
+                     } catch (networkErr: IOException){
+                     
+                         if(playlist.value.isNullOrEmpty())
+                              
+                             // 事件報錯值設為 true
+                     
+                     }
+                     
                    
                    }
               
