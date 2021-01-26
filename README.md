@@ -167,7 +167,7 @@ ViewMode Pattern and LiveData as an observable data holder
 
 
 
-5. code for ViewModels Pattern using LiveData Module.
+5. code for ViewModels Pattern using LiveData Module. ViewModel is designed to store and manage UI-related data in a lifecycle concious way. It allows data to survive config changes such as Screen rotaions. And worker threads in background work such as fetching data from remote thru config and pass data after the Activity or Fragment is available.
  
        // got to app/src/main/java....../katesvideoapp/viewmodels/KatesViewModel.kt
        
