@@ -120,14 +120,18 @@ ViewMode Pattern and LiveData as an observable data holder
        [lifecycle module]
        import androidx.lifecycle.LiveData
        
-       [data modules]
-       // TODO
+       [cached data modules]
+       import com.example.android.katesvideoapp.db.VideosDB // 緩存中的資料
+       import com.example.android.katesvideoapp.db.asDomainModel // 緩存中資料轉型為準備使用的資料
        
        [coroutines modules]
        import kotlinx.coroutines.Dispatchers
        import kotlinx.coroutines.withContext
        
        [network module]
+       import com.example.android.katesvideoapp.network.Network
+       import com.example.android.katesvideoapp.network.asDBModel // 線上的資料轉型
+       
        import com.example.android.katesvideoapp.network.Network
        
        [log]
