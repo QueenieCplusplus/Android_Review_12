@@ -73,7 +73,7 @@ ViewMode Pattern and LiveData as an observable data holder
                              
                              
   
-                                 (3) 暫存器，扮演記憶體使用佔用資料的協調者角色
+                                 (3) 硬碟中的暫存器，扮演記憶體使用佔用資料的協調者角色
                                      Repository, a Mediator for data src from remote or local.
                                      If this data is stale, the app's repository module starts updating the data in the background.
                                   
@@ -229,6 +229,20 @@ ViewMode Pattern and LiveData as an observable data holder
              abstract val videoDao:VideoDao  
           
           }
+          
+          /**
+           * Refresh the videos stored in the offline Cache (線下緩存).
+           *
+           *
+           * This function uses the IO dispatcher to ensure the DB insert DB ops 
+           * heppens on the IO dispatcher.
+           *
+           * By switching the IO dispatcher using `withContext`
+           * this function is safe to call from any thread including the Main UI thread & those Work threads/
+           *
+           *
+          **/
+          
           
           // public method to get DB entities
           
