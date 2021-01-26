@@ -244,6 +244,9 @@ ViewMode Pattern and LiveData as an observable data holder
               }
        
        }
+       
+       
+       ref https://github.com/google-developer-training/android-kotlin-fundamentals-apps/blob/master/DevBytesRepository/app/src/main/java/com/example/android/devbyteviewer/viewmodels/DevByteViewModel.kt
 
 
 6. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
