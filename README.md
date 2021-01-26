@@ -89,10 +89,14 @@ ViewMode Pattern and LiveData as an observable data holder
                                                   V
                           
   
-                                           (4) ViewModel
-                                              to bind (3) with UI element. 
+                                         (4) ViewModel
+                                        to bind (3) with UI element. 
                                               M + V = C, 
-                                              see Android_Review_12 using coroutines as workManager.
+                               see Android_Review_12 using coroutines as workManager.
+                    ViewModel is designed to store and manage UI-related data in a lifecycle concious way.
+                    It allows data to survive config changes such as Screen rotaions. And worker threads in 
+                    background work such as fetching data from remote thru config and pass data after the 
+                    Activity or Fragment is available.
            
 
 3. add dependencies using implementation method called in path app/build.gradle
