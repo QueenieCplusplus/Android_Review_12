@@ -115,7 +115,7 @@ ViewMode Pattern and LiveData as an observable data holder
 
         }
 
-4. code for Repository.
+4. 暫存調度器寫法, code for Repository.
 
        // go to app/src/main/java/...../katesvideoapp/repo/VideosRepo.kt
        
@@ -177,7 +177,7 @@ ViewMode Pattern and LiveData as an observable data holder
 
 
 
-5. code for ViewModels Pattern using LiveData Module. ViewModel is designed to store and manage UI-related data in a lifecycle concious way. It allows data to survive config changes such as Screen rotaions. And worker threads in background work such as fetching data from remote thru config and pass data after the Activity or Fragment is available.
+5. 畫面繫結資料都須先經過 <LiveData> 轉型, code for ViewModels Pattern using LiveData Module. ViewModel is designed to store and manage UI-related data in a lifecycle concious way. It allows data to survive config changes such as Screen rotaions. And worker threads in background work such as fetching data from remote thru config and pass data after the Activity or Fragment is available.
  
        // got to app/src/main/java....../katesvideoapp/viewmodels/KatesViewModel.kt
        
@@ -280,7 +280,7 @@ ViewMode Pattern and LiveData as an observable data holder
        ref https://github.com/google-developer-training/android-kotlin-fundamentals-apps/blob/master/DevBytesRepository/app/src/main/java/com/example/android/devbyteviewer/viewmodels/DevByteViewModel.kt
 
 
-6. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
+6. 關於應用程式硬碟中的緩存資料模組, supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
 
           // from DBVideo to VideosDB
           // go to app/src/main/java/..../katesvideoapp/db/Room.kt 持續性資料庫
