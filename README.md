@@ -124,6 +124,9 @@ ViewMode Pattern and LiveData as an observable data holder
        [lifecycle module]
        import androidx.lifecycle.LiveData
        
+       [Transformation from Cache to Repository]
+       import androidx.lifecycle.Transformations
+       
        [cached data modules]
        import com.example.android.katesvideoapp.db.VideosDB // 緩存中的資料
        import com.example.android.katesvideoapp.db.asDomainModel // 緩存中資料轉型為準備使用的資料
@@ -145,12 +148,15 @@ ViewMode Pattern and LiveData as an observable data holder
         * Repository fetches data from Network and storing them on Disk.
         **/
 
-       class VideosRepo(){
+       class VideosRepo(private val db: VideosDB){
        
        
              // using Domain Data Model called <Video>
-             val videos: LiveData<List<Video>> 
-       
+             // 從緩存中藉由Dao提取影片，並且在函數中轉型為 Domain 型態的資料 
+             // <VideosDB> - Dao -> <DBVideo> - asDomainModel() -> <Video>
+             val videos: LiveData<List<Video>> = Transformations.map(db.videoDao.getVideos()){
+              it.asDoaminModel()
+             }
        
        
              suspend fun refreshVideos(){
