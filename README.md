@@ -218,6 +218,12 @@ ViewMode Pattern and LiveData as an observable data holder
        
               // TODO
               // 資料常數宣告定義如下
+              // 從應用程式緩存中提取資料
+              // 緩存調度器 Repository 呼叫 <VideosDB> - Dao -> <DBVideo> - asDomainModel() -> <Video>
+              private val videosRepo = VideosRepo(getDB(application))
+              
+              // 將呈現在應用程式畫面上的影片
+              val playlist = videosRepo.videos
               
               
               
