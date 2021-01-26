@@ -349,4 +349,4 @@ ViewMode Pattern and LiveData as an observable data holder
   
   8. today's tip (init{})
   
-     to be continued....
+     https://www.kotlincn.net/docs/reference/classes.html
