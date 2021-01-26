@@ -350,3 +350,7 @@ ViewMode Pattern and LiveData as an observable data holder
   8. today's tip (init{})
   
      https://www.kotlincn.net/docs/reference/classes.html
+     
+  9. android's tip (coroutines)
+  
+     https://medium.com/jastzeonic/kotlin-coroutine-那一兩件事情-685e02761ae0
