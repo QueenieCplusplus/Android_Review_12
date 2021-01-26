@@ -354,3 +354,5 @@ ViewMode Pattern and LiveData as an observable data holder
   9. android's tip (coroutines)
   
      https://medium.com/jastzeonic/kotlin-coroutine-那一兩件事情-685e02761ae0
+     
+     https://kotlinlang.org/docs/reference/coroutines/composing-suspending-functions.html
