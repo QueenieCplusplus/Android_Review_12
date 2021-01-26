@@ -230,7 +230,14 @@ ViewMode Pattern and LiveData as an observable data holder
               }
               
               
-              class 
+              // Factory is ViewModel's Constructor within Param
+              class Factory(val app:Application): ViewModelProvider.Factory {
+              
+                     //TODO
+                     overrife fun create() {
+                     }
+              
+              }
        
        }
 
