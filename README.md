@@ -180,6 +180,8 @@ ViewMode Pattern and LiveData as an observable data holder
        import androidx.lifecycle.AndoridViewModel
        import androidx.lifecycle.LiveData
        import androidx.lifecycyle.MutableLiveData
+       
+       [ViewModel Modules]
        import androidx.lifecycle.ViewModelProvider
        import androidx.lifecycle.viewModelScope
        
@@ -201,7 +203,36 @@ ViewMode Pattern and LiveData as an observable data holder
        [exception handler]
        import java.io.IOException
        
-       // TODO
+  
+       class ViewModel(application: Application): AndroidViewModel(application){
+       
+              // TODO
+              // 資料常數宣告定義如下
+              
+              
+              
+              // after ViewModel is created, then this method is called immediately
+              init {
+              
+                 funcCalled()
+              
+              }
+              
+              private fun funCalled(){
+              
+                   viewModelScopr.launch {
+                   
+                     // TODO: body
+                     // try{}catch(networkErr: IOException){}
+                   
+                   }
+              
+              }
+              
+              
+              class 
+       
+       }
 
 
 6. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
