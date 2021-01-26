@@ -317,7 +317,11 @@ ViewMode Pattern and LiveData as an observable data holder
           
           }
           
-  6. inspector 驗證寫法 in public method called getDB().
+  7. inspector 驗證寫法 in public method called getDB().
   
      https://github.com/google-developer-training/android-kotlin-fundamentals-apps/blob/master/DevBytesRepository/app/src/main/java/com/example/android/devbyteviewer/database/Room.kt
   
+  
+  8. today's tip (init{})
+  
+     to be continued....
