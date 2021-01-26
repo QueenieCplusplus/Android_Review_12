@@ -113,8 +113,51 @@ ViewMode Pattern and LiveData as an observable data holder
 
 4. code for Repository.
 
+       // go to app/src/main/java/...../katesvideoapp/repo/VideosRepo.kt
+       
+       package com.example.katesvideoapp/repo
+       
+       [lifecycle module]
+       import androidx.lifecycle.LiveData
+       
+       [data modules]
+       // TODO
+       
+       [coroutines modules]
+       import kotlinx.coroutines.Dispatchers
+       import kotlinx.coroutines.withContext
+       
+       [network module]
+       import com.example.android.katesvideoapp.network.Network
+       
+       [log]
+       import timber.log.Timber
+       
+       /**
+        * Repository fetches data from Network and storing them on Disk.
+        **/
 
-
+       class VideosRepo(){
+       
+       
+             // using Domain Data Model called <Video>
+             val videos: LiveData<List<Video>> 
+       
+       
+       
+             suspend fun refreshVideos(){
+             
+                    withContext(Dispatchers.IO){
+                    
+                         val playList = Netwrok.bytes.getPlayList()
+                         db.videoDao.insert(playList.asDBModel())
+                    
+                    }
+             
+             }
+       
+       
+       }
 
 
 
