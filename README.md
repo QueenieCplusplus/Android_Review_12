@@ -111,7 +111,16 @@ ViewMode Pattern and LiveData as an observable data holder
 
         }
 
-4. code for ViewModels Pattern using LiveData Module.
+4. code for Repository.
+
+
+
+
+
+
+
+
+5. code for ViewModels Pattern using LiveData Module.
  
        // got to app/src/main/java....../katesvideoapp/viewmodels/KatesViewModel.kt
        
@@ -138,9 +147,11 @@ ViewMode Pattern and LiveData as an observable data holder
        [coroutines]
        
        [exception handler]
+       
+       // TODO
 
 
-5. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
+6. supplement for Android_Review_11. To create a Dao, also known as Data Access Object between DBVideo and VideosDB. to create a persistent DB model using Room. R/W from DBVideo to VideosDB.
 
           // from DBVideo to VideosDB
           // go to app/src/main/java/..../katesvideoapp/db/Room.kt 持續性資料庫
